@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/fb90a23fc3.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/dist/css/style.css">
+   <title>Devis Vargas | Portfolio</title>
+</head>
+<body>
+   
+   <!-- Landing Page -->
+   <header id="header-home">
+      <div class="container">
+         <div class="fullscreen-video-wrap">
+            <video src="/dist/video/video.mp4" autoplay="true" loop="true"></video>
+         </div>
+         <div class="header-overlay"></div> 
+
+         <!-- Section A: Logo/Name/Social stack -->
+         <div class="home-a text-center py-2">
+            <img src="/dist/img/logo.png" id="logo" alt="Logo">
+            <h1>I Am Devis Vargas <span class="mobile-text">the <span class="txt-type" data-wait="3000" data-words='["Developer", "Designer", "Creator"]'></span></span></h1>
+            <div class="social">
+               <a href="https://linkedin.com/in/devis-vargas" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+               <a href="https://github.com/DevisVargas" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+               <a href="#xs" ><i class="far fa-file fa-3x"></i></a>
+            </div>
+         </div>
+
+         <!-- Section B: Form Hero -->
+         <div class="home-b py-1">
+            <div class="btn-box">
+               <button id="btn-1" onclick="openTech()">Tech Stack</button>
+               <button id="btn-2" onclick="openAbout()">About Me</button>
+               <button id="btn-3" onclick="openContact()">Contact Me</button>
+            </div>
+
+            <div id="content-1" class="content">
+               <div class="stack text-center">
+                  <h2>I am <span class="highlight">proficient</span> in:</h2> </span>
+                  <div class="icons">
+                     <img src="./img/html.png" alt="" class="app">
+                     <img src="./img/css.png" alt="" class="app">
+                     <img src="./img/js.png" alt="" class="app">
+                     <img src="./img/sass.png" alt="" class="app">
+                     <img src="./img/git.png" alt="" class="app">
+                     <img src="./img/ps.png" alt="" class="app">
+                  </div>
+               </div>
+            </div>
+
+            <div id="content-2" class="content">
+               <div class="about text-center">
+                  <p>My name is <strong>Devis Vargas</strong>, an enthusiastic web developer amazed at the fast paced advancements in the tech industry with a passion to contribute to it’s evolution.</p>
+                  <p>I enjoy blending in my experience from the sales and marketing field with creative web elements to produce an innovative and engaging final product. </p>
+                  <br>
+                  <p class="quote"><em>"Imagination is more important than knowledge. For knowledge is limited, whereas imagination encircles the world"</em> - Albert Einstein</p>
+               </div>
+            </div>
+
+            <div id="content-3" class="content">
+               <div class="contact text-center">
+                  <h3>
+                     Here is how you can reach me!
+                  </h3>
+                  <p>vargas.devis@outlook.com</p>
+                  <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                     <div class="text-field">
+                        <input type="text" class="text-input name-input" placeholder="Name" name="name">
+                        <input type="text" class="text-input subject-input" placeholder="Subject" name="subject">
+                        <input type="email" class="text-input email-input" placeholder="Email Address" name="email">
+                        <input type="text" class="text-input phone-input" placeholder="Phone Number" name="phone">
+                        <textarea class="text-input message-input" placeholder="Enter Message" name="message"></textarea>
+                        <div class="my-5">
+                           <div data-netlify-recaptcha="true"></div>
+                        </div>
+                     </div>
+                     <button type="submit" class="btn-main">Submit</button>
+                  </form>
+               </div>
+            </div>
+
+         </div>
+
+         <!-- Section C: View More -->
+         <div class="home-c py-2">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="#"> View Projects <i class="fas fa-chevron-down"></i></a>
+         </div>
+
+      </div>
+   </header>
+   <script>
+      var content1 = document.getElementById("content-1");
+      var content2 = document.getElementById("content-2");
+      var content3 = document.getElementById("content-3");
+
+      var btn1 = document.getElementById("btn-1");
+      var btn2 = document.getElementById("btn-2");
+      var btn3 = document.getElementById("btn-3");
+
+      function openTech(){
+         content1.style.transform = "translatex(0)";
+         content2.style.transform = "translatex(150%)";
+         content3.style.transform = "translatex(150%)";
+         content1.style.display = "";
+         content2.style.display = "none";
+         content3.style.display = "none";
+         btn1.style.color = "#922222";
+         btn2.style.color = "#f4f4f4";
+         btn3.style.color = "#f4f4f4";
+      }
+
+      function openAbout(){
+         content1.style.transform = "translatex(150%)";
+         content2.style.transform = "translatex(0)";
+         content3.style.transform = "translatex(150%)";
+         content1.style.display = "none";
+         content2.style.display = "";
+         content3.style.display = "none";
+         btn2.style.color = "#922222";
+         btn1.style.color = "#f4f4f4";
+         btn3.style.color = "#f4f4f4";
+      }
+
+      function openContact(){
+         content1.style.transform = "translatex(150%)";
+         content2.style.transform = "translatex(150%)";
+         content3.style.transform = "translatex(0)";
+         content1.style.display = "none";
+         content2.style.display = "none";
+         content3.style.display = "";
+         btn3.style.color = "#922222";
+         btn2.style.color = "#f4f4f4";
+         btn1.style.color = "#f4f4f4";
+      }
+   </script>
+   <script src="/dist/js/typewriter.js"></script>
+</body>
+</html>

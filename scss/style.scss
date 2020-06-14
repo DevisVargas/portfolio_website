@@ -1,0 +1,291 @@
+@import 'config';
+@import 'utilities';
+
+// General Styles
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Dosis', sans-serif;
+   line-height: 1.6;
+}
+
+a{
+   text-decoration: none;
+   color: $light-color;
+}
+
+ul{
+   list-style: none;
+}
+
+img{
+   width: 100%;
+}
+
+// Logo
+#logo{
+   height: 200px;
+   width: auto;
+}
+
+// Landing Header
+#header-home{
+   height: 100vh;
+   display: flex;
+   overflow: hidden;
+}
+
+// Fullscreen Wrap
+.fullscreen-video-wrap{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   z-index: 0;
+   align-self: center;
+}
+
+.fullscreen-video-wrap video{
+   min-width: 100%;
+   min-height: 100%;
+   z-index: 0;
+}
+
+.header-overlay{
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: black;
+   z-index: 1;
+   opacity: 0.70;
+}
+
+// Section A: Logos & Social
+.home-a{
+   margin: 0;
+   width: 100%;
+   height: auto;
+   z-index: 2;
+   color: #fff;
+   position: relative;
+   align-self: center;
+   justify-content: center;
+   overflow: hidden;
+
+   h1{
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+
+      .txt-type{
+         color: $main-color;
+      }
+   }
+
+   .social{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a{
+         margin: 0 1rem;
+         transition: color 0.5s;
+      }
+
+      a:hover{
+         color: $main-color;
+      }
+   }
+}
+
+// Section B: Form Stack
+.home-b{
+   width: 100%;
+   height: 100%;
+   position: relative;
+   margin: 0 auto;
+   z-index: 2;
+   overflow: hidden;
+
+   .btn-box{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      button{
+         max-width: 18rem;
+         background: transparent;
+         color: $light-color;
+         border: none;
+         border-bottom: 4px solid $dark-color;
+         outline:none;
+         cursor: pointer;
+         padding: 1rem;
+         margin: 0 4rem;
+         font-size: 2rem;
+         font-weight: bold;
+         transition: color 0.25s;
+
+         &:hover{
+            color: $main-color;
+         }
+      }
+   }
+
+   .content{
+      position: relative;
+      transform: translateX(0%);
+   }
+
+   .stack{
+
+      h2{
+         font-size: 3rem;
+         font-weight: 400;
+         color: $light-color;
+      }
+
+      .icons{
+         margin-top: 1rem;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 1.5rem 0;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+
+         .app{
+            align-self: center;
+            justify-self: center;
+            height: 90px;
+            width: auto;
+            position: relative;
+            transition: all 0.75s;
+            padding: .5rem;
+
+            &:hover{
+               height: 105px;
+               width: auto;
+            }
+         }
+      }
+
+   }
+
+   .about{
+      margin-top: 0.9rem;
+      font-size: 1.7rem;
+      color: $light-color;
+
+      strong{
+         color: $main-color;
+      }
+
+      .quote{
+         display: none;
+      }
+   }
+
+   .contact{
+
+      h3{
+         margin-top: 0.5rem;
+         color: $light-color;
+         text-transform: capitalize;
+         font-size: 2rem;
+         font-weight: 600;
+      }
+
+      p{
+         color: $light-color;
+         font-size: 1.4rem;
+         font-weight: 400;
+         margin-bottom: 0.5rem;
+      }
+
+      .text-field{
+         display: grid;
+         grid-template-areas:
+         'name subject'
+         'email phone'
+         'message message';
+         grid-gap: 1rem;
+         margin-bottom: 0.5rem;
+
+         .name-input{
+            grid-area: name;
+         }
+
+         .subject-input{
+            grid-area: subject;
+         }
+
+         .email-input{
+            grid-area: email;
+         }
+
+         .phone-input{
+            grid-area: phone;
+         }
+
+         .message-input{
+            grid-area: message;
+         }
+
+         .text-input{
+            padding: 0.5rem 1rem;
+         }
+      }
+
+      button[type='submit']{
+         width: 40%;
+         height: 35px;
+      }
+
+
+   }
+}
+
+.home-C{
+   position: relative;
+
+   z-index: 3;
+   overflow: hidden;
+   text-align: center;
+   font-size: 1.4rem;
+
+   a{
+      color: $light-color;
+   }
+
+   p{
+      color: $light-color;
+   }
+}
+
+#content{
+   &-1{
+      transform: translateX(0);
+   }
+   &-2{
+      transform: translateX(150%);
+   }
+   &-3{
+      transform: translateX(150%);
+   }
+}
+
+#btn{
+   &-1{
+      color: $main-color;
+   }
+}
+
+@import 'media';
